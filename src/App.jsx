@@ -1,7 +1,23 @@
+// import Navbar from "./components/Navbar";
+import { Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
+// pages
+import HomePage from "./pages/Home";
+import SearchPage from "./pages/Search";
+
 function App() {
   return (
     <>
-      <div className="text-red-500 text-3xl">Hello</div>
+      <Router>
+        <Routes>
+          {/* Home */}
+          <Route exact path="/" element={<HomePage />}></Route>
+
+          {/* Login */}
+          <Route exact path="/login" element={<SearchPage />}></Route>
+        </Routes>
+      </Router>
     </>
   );
 }
