@@ -1,13 +1,28 @@
+/* Hide the scrollbar */
+::-webkit-scrollbar {
+  width: 2px;
+  background: transparent;
+}
+
+/* Optional: Add a background color to the track */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   .active-route {
-    @apply font-bold flex flex-row space-x-6 text-white transition delay-100 duration-100 ease-in-out py-2 px-3 rounded-xl cursor-pointer;
+    @apply font-bold flex flex-row space-x-6 transition delay-100 duration-100 ease-in-out py-2 px-3 rounded-xl cursor-pointer;
   }
 
   .inactive-route {
-    @apply flex flex-row space-x-6 text-dark-600 font-medium py-2 px-3 rounded-xl cursor-pointer;
+    @apply flex flex-row space-x-6 text-primary-gray font-medium py-2 px-3 rounded-xl cursor-pointer;
+  }
+
+  .primary-text {
+    @apply text-xl font-medium;
   }
 }
