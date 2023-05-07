@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div>
       {/* Navbar */}
-      <div className="w-[16%] bg-slate-800">
+      <div className="w-[16%] bg-dark-100">
         <Navbar />
       </div>
 

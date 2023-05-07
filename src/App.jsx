@@ -15,7 +15,7 @@ function App() {
           <Route exact path="/" element={<HomePage />}></Route>
 
           {/* Login */}
-          <Route exact path="/login" element={<SearchPage />}></Route>
+          <Route exact path="/search" element={<SearchPage />}></Route>
         </Routes>
       </Router>
     </>

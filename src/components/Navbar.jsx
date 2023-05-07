@@ -9,9 +9,9 @@ import LightSearchIcon from "../Icons/Light/Search";
 const Navbar = () => {
   const location = useLocation();
   return (
-    <div className="">
+    <div className="h-screen flex flex-col space-y-2">
       {/* routing area */}
-      <div>
+      <div className="bg-dark-200 rounded-md m-2">
         {/* Home */}
         <Link to="/">
           {location.pathname === "/" ? (
@@ -20,15 +20,15 @@ const Navbar = () => {
                 <BoldHomeIcon color="#ffffff" size="27" />
               </div>
 
-              <div>Home</div>
+              <div className="text-lg">Home</div>
             </div>
           ) : (
             <div className="inactive-route">
               <div className="my-auto">
-                <LightHomeIcon color="#ffffff" size="27" />
+                <LightHomeIcon color="#94A3B8" size="27" />
               </div>
 
-              <div>Home</div>
+              <div className="text-lg">Home</div>
             </div>
           )}
         </Link>
@@ -41,15 +41,15 @@ const Navbar = () => {
                 <BoldSearchIcon color="#ffffff" size="27" />
               </div>
 
-              <div>Search</div>
+              <div className="text-lg">Search</div>
             </div>
           ) : (
             <div className="inactive-route">
               <div className="my-auto">
-                <LightSearchIcon color="#ffffff" size="27" />
+                <LightSearchIcon color="#94A3B8" size="27" />
               </div>
 
-              <div>Search</div>
+              <div className="text-lg">Search</div>
             </div>
           )}
         </Link>
