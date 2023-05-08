@@ -4,7 +4,7 @@ import MostLikely from "../components/Home/MostLikely";
 
 const Home = () => {
   return (
-    <div className="flex space-x-4 bg-dark-100 p-4">
+    <div className="flex space-x-2 bg-dark-100 p-2">
       {/* Navbar */}
       <div className="w-[20%] bg-dark-100">
         <Navbar />
