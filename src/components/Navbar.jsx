@@ -1,4 +1,5 @@
 import { useLocation, Link } from "react-router-dom";
+import Songs from "./Songs";
 
 // Icons
 import BoldHomeIcon from "../Icons/Bold/Home";
@@ -69,9 +70,9 @@ const Navbar = () => {
       </div>
 
       {/* Your Library */}
-      <div className="flex flex-col space-y-2 bg-dark-300 rounded-md py-3 px-4">
+      <div className="h-[70%] flex flex-col space-y-2 bg-dark-300 rounded-md py-3 px-2">
         {/* heading */}
-        <div className="flex justify-between">
+        <div className="flex justify-between px-3">
           <div className="flex space-x-2 cursor-pointer my-auto">
             {/* Icon */}
             <div>
@@ -100,7 +101,7 @@ const Navbar = () => {
         </div>
 
         {/* categeroies */}
-        <div className="flex space-x-2 overflow-x-scroll">
+        <div className="flex space-x-2 overflow-x-scroll px-3">
           {categories.map((element) => (
             <div className="text-white bg-dark-400 py-1 px-2 rounded-full font-medium cursor-pointer">
               {element}
@@ -108,25 +109,35 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* search and recent */}
-        <div className="flex justify-between">
-          {/* searchicon */}
-          <div className="rounded-full hover:bg-dark-100 cursor-pointer p-2">
-            <LightSearchIcon size="25" color="#ffffff" />
-          </div>
+        <div className="overflow-y-scroll rounded-md">
+          {/* search and recent */}
+          <div className="flex justify-between">
+            {/* searchicon */}
+            <div className="rounded-full hover:bg-dark-100 cursor-pointer p-2">
+              <LightSearchIcon size="25" color="#ffffff" />
+            </div>
 
-          {/* recents */}
-          <div className="flex space-x-1 text-primary-gray hover:text-white cursor-pointer">
-            <div className="my-auto font-medium ">Recents</div>
+            {/* recents */}
+            <div className="flex space-x-1 text-primary-gray hover:text-white cursor-pointer">
+              <div className="my-auto font-medium ">Recents</div>
 
-            <div className="my-auto">
-              <SmallDownArrowIcon size="25" color="#cbd5e1" />
+              <div className="my-auto">
+                <SmallDownArrowIcon size="25" color="#cbd5e1" />
+              </div>
             </div>
           </div>
-        </div>
 
-        {/* songs */}
-        <div></div>
+          {/* songs */}
+          <div className="flex flex-col space-y-2">
+            {/*  */}
+            <Songs />
+            <Songs />
+            <Songs />
+            <Songs />
+            <Songs />
+            <Songs />
+          </div>
+        </div>
       </div>
     </div>
   );
