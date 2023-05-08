@@ -1,4 +1,4 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar";
 
 const Search = () => {
   return (
@@ -9,7 +9,7 @@ const Search = () => {
       </div>
 
       {/* Main Page */}
-      <div className="w-[80%]"></div>
+      <div className="w-[80%] bg-dark-100"></div>
     </div>
   );
 };

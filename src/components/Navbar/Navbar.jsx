@@ -2,14 +2,14 @@ import { useLocation, Link } from "react-router-dom";
 import Songs from "./Songs";
 
 // Icons
-import BoldHomeIcon from "../Icons/Bold/Home";
-import LightHomeIcon from "../Icons/Light/Home";
-import BoldSearchIcon from "../Icons/Bold/Search";
-import LightSearchIcon from "../Icons/Light/Search";
-import BoldLibraryIcon from "../Icons/Bold/Library";
-import RightArrowIcon from "../Icons/Regular/RightArrow";
-import PlusIcon from "../Icons/Regular/Plus";
-import SmallDownArrowIcon from "../Icons/Regular/SmallDownArrow";
+import BoldHomeIcon from "../../Icons/Bold/Home";
+import LightHomeIcon from "../../Icons/Light/Home";
+import BoldSearchIcon from "../../Icons/Bold/Search";
+import LightSearchIcon from "../../Icons/Light/Search";
+import BoldLibraryIcon from "../../Icons/Bold/Library";
+import RightArrowIcon from "../../Icons/Regular/RightArrow";
+import PlusIcon from "../../Icons/Regular/Plus";
+import SmallDownArrowIcon from "../../Icons/Regular/SmallDownArrow";
 
 const Navbar = () => {
   const location = useLocation();
@@ -23,9 +23,9 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="h-screen flex flex-col space-y-2 p-2">
+    <div className="h-screen flex flex-col space-y-2">
       {/* routing area */}
-      <div className="bg-dark-300 rounded-md py-3 px-4">
+      <div className="bg-dark-200 rounded-md py-3 px-4">
         {/* Home */}
         <Link to="/">
           {location.pathname === "/" ? (
@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {/* Your Library */}
-      <div className="h-[70%] flex flex-col space-y-2 bg-dark-300 rounded-md py-3 px-2">
+      <div className="h-[70%] flex flex-col space-y-2 bg-dark-200 rounded-md py-3 px-2">
         {/* heading */}
         <div className="flex justify-between px-3">
           <div className="flex space-x-2 cursor-pointer my-auto">
@@ -87,12 +87,12 @@ const Navbar = () => {
 
           {/* other icons */}
           <div className="flex space-x-2">
-            <div className="rounded-full hover:bg-dark-100 cursor-pointer p-2">
+            <div className="rounded-full hover:bg-dark-400 cursor-pointer p-2">
               <PlusIcon size="30" color="#ffffff" />
             </div>
 
             <div
-              className="rounded-full hover:bg-dark-100 cursor-pointer p-2"
+              className="rounded-full hover:bg-dark-400 cursor-pointer p-2"
               id="rightArrowIcon"
             >
               <RightArrowIcon size="30" color="#ffffff" />
@@ -101,7 +101,7 @@ const Navbar = () => {
         </div>
 
         {/* categeroies */}
-        <div className="flex space-x-2 overflow-x-scroll px-3">
+        <div className="flex space-x-2 overflow-x-scroll px-3 py-2">
           {categories.map((element) => (
             <div className="text-white bg-dark-400 py-1 px-2 rounded-full font-medium cursor-pointer">
               {element}

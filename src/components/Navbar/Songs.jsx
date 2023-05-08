@@ -1,4 +1,4 @@
-import BoldPinIcon from "../Icons/Bold/Pin";
+import BoldPinIcon from "../../Icons/Bold/Pin";
 
 const Songs = () => {
   return (
