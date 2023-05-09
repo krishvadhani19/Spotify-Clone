@@ -80,7 +80,7 @@ const Navbar = () => {
             </div>
 
             {/* text */}
-            <div className="primary-text text-primary-gray hover:text-white">
+            <div className="primary-text text-primary-gray hover:text-white select-none">
               Your Library
             </div>
           </div>

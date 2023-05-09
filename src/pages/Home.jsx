@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
 import Heading from "../components/Home/Heading";
 import MostLikely from "../components/Home/MostLikely";
+import TopMixes from "../components/Home/TopMixes";
 
 const Home = () => {
   return (
@@ -20,6 +21,11 @@ const Home = () => {
         {/* Most Liked */}
         <div className="w-full">
           <MostLikely />
+        </div>
+
+        {/* Top Mixes */}
+        <div>
+          <TopMixes />
         </div>
       </div>
     </div>
