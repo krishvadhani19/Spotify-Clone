@@ -51,7 +51,7 @@ const TopMixes = () => {
       {/* cards */}
       <div className="grid grid-cols-5 gap-8">
         {topMixCardData.map((element) => (
-          <TopMixCard data={element} />
+          <TopMixCard data={element} key={element.heading} />
         ))}
       </div>
     </div>

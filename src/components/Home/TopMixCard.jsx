@@ -2,15 +2,15 @@ import BoldPlayButton from "../../Icons/Bold/Play";
 
 const TopMixCard = (props) => {
   const handleMouseOver = () => {
-    const playButton = document.getElementById("playButton");
-    playButton.classList.remove("hidden");
-    playButton.classList.add("inline -translate-y-2");
+    // const playButton = document.getElementById("playButton");
+    // playButton.classList.remove("hidden");
+    // playButton.classList.add("inline -translate-y-2");
   };
 
   const handleMouseOut = () => {
-    const playButton = document.getElementById("playButton");
-    playButton.classList.remove("inline");
-    playButton.classList.add("hidden ");
+    // const playButton = document.getElementById("playButton");
+    // playButton.classList.remove("inline");
+    // playButton.classList.add("hidden ");
   };
   return (
     <div
@@ -27,7 +27,7 @@ const TopMixCard = (props) => {
         />
 
         <div
-          className="absolute right-0 bottom-0 bg-dark-100 rounded-full hidden"
+          className="absolute right-0 bottom-0 bg-dark-100 rounded-full"
           id="playButton"
         >
           <BoldPlayButton size="65" color="#22c55e" />

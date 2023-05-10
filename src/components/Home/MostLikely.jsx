@@ -37,7 +37,7 @@ const MostLikely = () => {
     <div className="text-white grid grid-cols-3 gap-4">
       {/* Liked Songs */}
       {mostLikelyCardData.map((element) => (
-        <MostLikeyCard data={element} />
+        <MostLikeyCard data={element} key={element.heading} />
       ))}
     </div>
   );

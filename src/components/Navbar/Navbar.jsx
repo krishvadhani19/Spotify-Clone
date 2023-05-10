@@ -23,7 +23,7 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="h-screen flex flex-col space-y-2">
+    <div className="h-full flex flex-col space-y-2">
       {/* routing area */}
       <div className="bg-dark-200 rounded-md py-3 px-4">
         {/* Home */}
@@ -70,7 +70,7 @@ const Navbar = () => {
       </div>
 
       {/* Your Library */}
-      <div className="h-[70%] flex flex-col space-y-2 bg-dark-200 rounded-md py-3 px-2">
+      <div className="h-[82%] flex flex-col space-y-2 bg-dark-200 rounded-md py-3 px-2">
         {/* heading */}
         <div className="flex justify-between px-3">
           <div className="flex space-x-2 cursor-pointer my-auto">
@@ -109,7 +109,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        <div className="overflow-y-scroll rounded-md">
+        <div className="overflow-y-auto rounded-md">
           {/* search and recent */}
           <div className="flex justify-between">
             {/* searchicon */}
