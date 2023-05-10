@@ -2,10 +2,11 @@ import Navbar from "../components/Navbar/Navbar";
 import Heading from "../components/Home/Heading";
 import MostLikely from "../components/Home/MostLikely";
 import TopMixes from "../components/Home/TopMixes";
+import Player from "../components/Player";
 
 const Home = () => {
   return (
-    <div className="flex flex-col bg-dark-100 p-2 h-screen">
+    <div className="flex flex-col space-y-2 bg-dark-100 p-2 h-screen">
       <div className="flex space-x-2 bg-dark-100 w-full h-[90%] overflow-y-scroll rounded-md">
         {/* Navbar */}
         <div className="h-full w-[20%] rounded-md">
@@ -47,7 +48,9 @@ const Home = () => {
       </div>
 
       {/* div */}
-      <div>Player</div>
+      <div className="w-full h-[10%]">
+        <Player />
+      </div>
     </div>
   );
 };
