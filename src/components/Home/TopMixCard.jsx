@@ -1,6 +1,6 @@
 import BoldPlayButton from "../../Icons/Bold/Play";
 
-const TopMixCard = () => {
+const TopMixCard = (props) => {
   const handleMouseOver = () => {
     const playButton = document.getElementById("playButton");
     playButton.classList.remove("hidden");
@@ -21,7 +21,7 @@ const TopMixCard = () => {
       {/* img */}
       <div className="relative">
         <img
-          src="https://lastfm.freetls.fastly.net/i/u/ar0/bb3843bfab8279d6cb10f58d3d2a3fe4.jpg"
+          src={props.data.imageURL}
           alt=""
           className="rounded-md h-48 w-full"
         />
@@ -35,14 +35,15 @@ const TopMixCard = () => {
       </div>
 
       {/* heading */}
-      <div className="text-lg text-white font-semibold">Hindi Mix</div>
+      <div className="text-lg text-white font-semibold">
+        {props.data.heading}
+      </div>
 
       {/* creators */}
       <div className="text-primary-gray font-medium text-base">
-        <div className="inline hover:underline">Piyush Mi, </div>
-        <div className="inline hover:underline">Anuv Jain, </div>
-        <div className="inline hover:underline">Arjit Singh </div>
-        <div className="inline">and More</div>
+        <div className="inline hover:underline">{props.data.singers[0]}, </div>
+        <div className="inline hover:underline">{props.data.singers[1]}, </div>
+        <div className="inline hover:underline">{props.data.singers[2]}</div>
       </div>
     </div>
   );
