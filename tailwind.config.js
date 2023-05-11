@@ -12,7 +12,7 @@ export default {
         "dark-400": "#333333",
         "dark-300": "#222222",
         "dark-200": "#1a1a1a ",
-        "dark-100": "#111111",
+        "dark-100": "#000000",
 
         "primary-gray": "#cbd5e1",
       },

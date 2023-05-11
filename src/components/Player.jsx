@@ -38,9 +38,9 @@ const Player = () => {
       </div>
 
       {/* controls */}
-      <div className="flex flex-col space-y-2 my-auto">
+      <div className="w-[35%] flex flex-col mt-2">
         {/*  */}
-        <div className="flex space-x-4">
+        <div className=" mx-auto flex space-x-4">
           {/* shuffle */}
           <div className="my-auto">
             <LightShuffleIcon color="#cbd5e1" size="23" />
@@ -68,15 +68,19 @@ const Player = () => {
         </div>
 
         {/*  */}
-        <div>
+        <div className="my-auto flex space-x-2">
           {/* t1 */}
-          <div></div>
+          <div className="text-primary-gray text-xs my-auto font-medium">
+            1:56
+          </div>
 
           {/* music */}
-          <div className="w-[250%] h-1 rounded-md bg-white"></div>
+          <div className="w-[100%] h-1 rounded-md bg-white my-auto"></div>
 
           {/* t2 */}
-          <div></div>
+          <div className="text-primary-gray text-xs my-auto font-medium">
+            2:07
+          </div>
         </div>
       </div>
 

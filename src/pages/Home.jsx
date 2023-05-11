@@ -48,7 +48,7 @@ const Home = () => {
       </div>
 
       {/* div */}
-      <div className="w-full h-[11%]">
+      <div className="w-[98%] mx-auto h-[11%]">
         <Player />
       </div>
     </div>
