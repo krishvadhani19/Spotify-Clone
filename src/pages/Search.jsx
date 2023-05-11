@@ -15,47 +15,10 @@ const Search = () => {
         </div>
 
         {/* Main Page */}
-        <div className="ml-[21%] flex flex-col space-y-4 w-[80%] h-full bg-dark-200 rounded-md overflow-y-auto">
-          <div className="flex flex-col space-y-4 w-full bg-gradient-to-b from-cyan-800 to-dark-200 pt-4 px-4">
-            {/* controls */}
-            <div className="w-full">
-              <Controls />
-            </div>
-
-            {/* sponsored */}
-            <div className="w-full"></div>
-
-            {/* Heading */}
-            <div className="w-full">
-              <Heading />
-            </div>
-
-            {/* Most Liked */}
-            <div className="w-full">
-              <MostLikely />
-            </div>
-
-            {/* Top Mixes */}
-            <div>
-              <TopMixes />
-            </div>
-          </div>
-
-          <div className="flex flex-col space-y-4 w-full bg-dark-200 px-4 pb-4">
-            {/* Top Mixes */}
-            <div>
-              <TopMixes />
-            </div>
-
-            {/* Top Mixes */}
-            <div>
-              <TopMixes />
-            </div>
-
-            {/* Top Mixes */}
-            <div>
-              <TopMixes />
-            </div>
+        <div className="ml-[21%] flex flex-col space-y-4 w-[80%] h-full bg-dark-200 rounded-md overflow-y-auto p-4">
+          {/* controls */}
+          <div className="w-full">
+            <Controls searchVerify={true}/>
           </div>
         </div>
       </div>

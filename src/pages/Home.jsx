@@ -19,7 +19,7 @@ const Home = () => {
           <div className="flex flex-col space-y-4 w-full bg-gradient-to-b from-cyan-800 to-dark-200 pt-4 px-4">
             {/* controls */}
             <div className="w-full">
-              <Controls />
+              <Controls searchVerify={false} />
             </div>
 
             {/* sponsored */}
