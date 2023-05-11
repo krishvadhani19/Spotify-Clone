@@ -12,7 +12,7 @@ export default function Search({
     >
       <path
         fill-rule="evenodd"
-        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm-1 14H9V8h2v8Zm2 0h2V8h-2v8Z"
+        d="M12 1c6.075 0 11 4.925 11 11s-4.925 11-11 11S1 18.075 1 12 5.925 1 12 1ZM6 9a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9Zm2 5h1v-4H8v4Zm6-6a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1h-3Zm2 6h-1v-4h1v4Z"
         clip-rule="evenodd"
       ></path>
     </svg>

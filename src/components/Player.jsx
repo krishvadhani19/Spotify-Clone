@@ -7,12 +7,46 @@ import RepeatIcon from "../Icons/Regular/Repeat";
 import RepeatOneIcon from "../Icons/Regular/RepeatOne";
 import LightDeviceIcon from "../Icons/Light/Device";
 import LightQueueIcon from "../Icons/Light/Queue";
+import LightMicIcon from "../Icons/Light/Mic";
+import LightSoundIcon from "../Icons/Light/Sound";
+import LightHeartIcon from "../Icons/Light/Heart";
+import BoldPauseIcon from "../Icons/Bold/Pause";
+import LightSoundMuteIcon from "../Icons/Light/SoundMute";
+
+import { useState } from "react";
 
 const Player = () => {
+  const [like, setLike] = useState(false);
+  const [play, setPlay] = useState(false);
+  const [mute, setMute] = useState(false);
+
+  const handleMute = () => {
+    if (mute) {
+      setMute(false);
+    } else {
+      setMute(true);
+    }
+  };
+  const hanldleLike = () => {
+    if (like) {
+      setLike(false);
+    } else {
+      setLike(true);
+    }
+  };
+
+  const handlePlay = () => {
+    if (play) {
+      setPlay(false);
+    } else {
+      setPlay(true);
+    }
+  };
+
   return (
     <div className="flex justify-between h-full my-auto">
       {/* image and title */}
-      <div className="flex space-x-6 my-auto">
+      <div className="w-[25%] flex space-x-6 justify-start my-auto">
         {/* image */}
         <div className="">
           <img
@@ -32,13 +66,18 @@ const Player = () => {
         </div>
 
         {/* like icon */}
-        <div className="my-auto">
-          <BoldHeartIcon color="#22c55e" size="25" />
+
+        <div className="my-auto" onClick={hanldleLike}>
+          {like ? (
+            <BoldHeartIcon color="#22c55e" size="23" />
+          ) : (
+            <LightHeartIcon color="#22c55e" size="23" />
+          )}
         </div>
       </div>
 
       {/* controls */}
-      <div className="w-[35%] flex flex-col mt-2">
+      <div className="w-[35%] flex flex-col mt-2 justify-center">
         {/*  */}
         <div className=" mx-auto flex space-x-4">
           {/* shuffle */}
@@ -52,8 +91,12 @@ const Player = () => {
           </div>
 
           {/* play&pause */}
-          <div className="my-auto">
-            <BoldPlayIcon color="#ffffff" size="43" />
+          <div className="mx-auto my-auto hover:scale-105" onClick={handlePlay}>
+            {play ? (
+              <BoldPauseIcon color="#ffffff" size="43" />
+            ) : (
+              <BoldPlayIcon color="#ffffff" size="43" />
+            )}
           </div>
 
           {/* next */}
@@ -85,15 +128,29 @@ const Player = () => {
       </div>
 
       {/* volume and other controls */}
-      <div className="flex space-x-2">
+      <div className="w-[25%] flex space-x-4 justify-end">
         {/*  */}
-        <div className="my-auto">
-          <LightQueueIcon color="#22c55e" size="25" />
+        <div className="my-auto cursor-pointer">
+          <LightMicIcon color="#cbd5e1" size="21" />
         </div>
 
         {/*  */}
-        <div className="my-auto">
-          <LightDeviceIcon color="#22c55e" size="25" />
+        <div className="my-auto cursor-pointer">
+          <LightQueueIcon color="#cbd5e1" size="21" />
+        </div>
+
+        {/*  */}
+        <div className="my-auto cursor-pointer">
+          <LightDeviceIcon color="#cbd5e1" size="21" />
+        </div>
+
+        {/*  */}
+        <div className="my-auto cursor-pointer" onClick={handleMute}>
+          {mute ? (
+            <LightSoundMuteIcon color="#cbd5e1" size="21" />
+          ) : (
+            <LightSoundIcon color="#cbd5e1" size="21" />
+          )}
         </div>
 
         {/*  */}
