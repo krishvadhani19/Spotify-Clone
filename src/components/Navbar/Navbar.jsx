@@ -41,7 +41,7 @@ const Navbar = () => {
     },
     {
       imageURL:
-      "https://images.hindustantimes.com/img/2022/11/29/1600x900/amit_1669708962386_1669708962544_1669708962544.PNG",
+        "https://images.hindustantimes.com/img/2022/11/29/1600x900/amit_1669708962386_1669708962544_1669708962544.PNG",
       pinned: false,
       heading: "Amit Trivedi",
       type: "Artist",
@@ -145,19 +145,19 @@ const Navbar = () => {
             </div>
 
             {/* text */}
-            <div className="primary-text text-primary-gray hover:text-white select-none">
+            <div className="tooltip primary-text text-primary-gray hover:text-white select-none">
               Your Library
             </div>
           </div>
 
           {/* other icons */}
           <div className="flex space-x-2">
-            <div className="rounded-full hover:bg-dark-400 cursor-pointer p-2">
+            <div className="rounded-full hover:bg-dark-400 cursor-pointer p-1">
               <PlusIcon size="30" color="#ffffff" />
             </div>
 
             <div
-              className="rounded-full hover:bg-dark-400 cursor-pointer p-2"
+              className="rounded-full hover:bg-dark-400 cursor-pointer p-1"
               id="rightArrowIcon"
             >
               <RightArrowIcon size="30" color="#ffffff" />
@@ -178,7 +178,7 @@ const Navbar = () => {
           {/* search and recent */}
           <div className="flex justify-between">
             {/* searchicon */}
-            <div className="rounded-full hover:bg-dark-100 cursor-pointer p-2">
+            <div className="rounded-full hover:bg-dark-400 cursor-pointer p-2">
               <LightSearchIcon size="25" color="#ffffff" />
             </div>
 

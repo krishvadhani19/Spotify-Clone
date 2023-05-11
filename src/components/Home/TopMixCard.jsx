@@ -1,16 +1,15 @@
-import BoldPlayButton from "../../Icons/Bold/Play";
+import BoldPlayIcon from "../../Icons/Bold/Play";
+import { useState } from "react";
 
 const TopMixCard = (props) => {
+  const [playButtonDisplay, setPlayButtonDisplay] = useState(false);
+
   const handleMouseOver = () => {
-    // const playButton = document.getElementById("playButton");
-    // playButton.classList.remove("hidden");
-    // playButton.classList.add("inline -translate-y-2");
+    setPlayButtonDisplay(true);
   };
 
   const handleMouseOut = () => {
-    // const playButton = document.getElementById("playButton");
-    // playButton.classList.remove("inline");
-    // playButton.classList.add("hidden ");
+    setPlayButtonDisplay(false);
   };
   return (
     <div
@@ -26,12 +25,13 @@ const TopMixCard = (props) => {
           className="rounded-md h-48 w-full"
         />
 
-        <div
-          className="absolute right-0 bottom-0 bg-dark-100 rounded-full"
-          id="playButton"
-        >
-          <BoldPlayButton size="65" color="#22c55e" />
-        </div>
+        {playButtonDisplay ? (
+          <div className="shadow-lg shadow-black/50 absolute right-0 bottom-0 bg-dark-100 rounded-full -translate-y-2">
+            <BoldPlayIcon size="55" color="#22c55e" />
+          </div>
+        ) : (
+          <></>
+        )}
       </div>
 
       {/* heading */}

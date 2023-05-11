@@ -1,10 +1,23 @@
 import BoldPlayIcon from "../../Icons/Bold/Play";
+import { useState } from "react";
 
 const MostLikelyCard = (props) => {
+  const [playButtonDisplay, setPlayButtonDisplay] = useState(false);
+  const handleMouseOver = () => {
+    setPlayButtonDisplay(true);
+  };
+
+  const handleMouseOut = () => {
+    setPlayButtonDisplay(false);
+  };
   return (
-    <div className="flex h-24 bg-dark-400 hover:bg-dark-600 rounded-md cursor-pointer transition delay-100 ease-in-out duration-300">
+    <div
+      className="flex h-24 bg-dark-400 hover:bg-dark-600 rounded-md cursor-pointer transition delay-100 ease-in-out duration-300"
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
       {/* img */}
-      <div className="shadow-2xl mr-6">
+      <div className="shadow-xl shadow-black/50 mr-6">
         <img
           className="w-24 h-24 rounded-l-md"
           src={props.data.imageURL}
@@ -18,9 +31,15 @@ const MostLikelyCard = (props) => {
       </div>
 
       {/* Play Button */}
-      <div className="bg-dark-100 rounded-full my-auto ml-auto mr-4 shadow-2xl hover:scale-110 transition ease-in-out delay-75 duration-100">
-        <BoldPlayIcon size="65" color="#22c55e" className="bg-dark-100" />
-      </div>
+
+      {playButtonDisplay ? (
+       <div className="shadow-lg shadow-black/50  bg-dark-100 rounded-full my-auto ml-auto mr-4 hover:scale-110 transition ease-in-out delay-75 duration-100">
+       <BoldPlayIcon size="55" color="#22c55e" className="bg-dark-100 " />
+     </div>
+      ) : (
+        <></>
+      )}
+    
     </div>
   );
 };
