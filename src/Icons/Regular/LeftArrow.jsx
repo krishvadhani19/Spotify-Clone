@@ -14,7 +14,7 @@ export default function Search({
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="m10 7 5 5-5 5"></path>
+      <path d="m14 7-5 5 5 5"></path>
     </svg>
   );
 }

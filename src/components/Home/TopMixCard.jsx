@@ -13,7 +13,7 @@ const TopMixCard = (props) => {
   };
   return (
     <div
-      className="flex flex-col space-y-4 rounded-md bg-dark-300 hover:bg-dark-500 transition-all delay-100 duration-300 ease-in-out p-4 cursor-pointer "
+      className="flex flex-col space-y-4 rounded-md bg-dark-300 hover:bg-dark-400 transition-all delay-100 duration-300 ease-in-out p-4 cursor-pointer "
       onMouseOver={handleMouseOver}
       onMouseOut={handleMouseOut}
     >
@@ -22,7 +22,7 @@ const TopMixCard = (props) => {
         <img
           src={props.data.imageURL}
           alt=""
-          className="rounded-md h-48 w-full"
+          className="rounded-md h-48 w-full shadow-lg shadow-black/50"
         />
 
         {playButtonDisplay ? (
