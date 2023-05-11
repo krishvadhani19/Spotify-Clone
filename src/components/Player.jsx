@@ -1,5 +1,12 @@
 import BoldHeartIcon from "../Icons/Bold/Heart";
 import LightShuffleIcon from "../Icons/Light/Shuffle";
+import BoldNextIcon from "../Icons/Bold/Next";
+import BoldPreviousIcon from "../Icons/Bold/Previous";
+import BoldPlayIcon from "../Icons/Bold/Play";
+import RepeatIcon from "../Icons/Regular/Repeat";
+import RepeatOneIcon from "../Icons/Regular/RepeatOne";
+import LightDeviceIcon from "../Icons/Light/Device";
+import LightQueueIcon from "../Icons/Light/Queue";
 
 const Player = () => {
   return (
@@ -31,29 +38,63 @@ const Player = () => {
       </div>
 
       {/* controls */}
-      <div className="my-auto">
+      <div className="flex flex-col space-y-2 my-auto">
         {/*  */}
-        <div>
+        <div className="flex space-x-4">
           {/* shuffle */}
-          <div>
-            <LightShuffleIcon color="#22c55e" size="25" />
+          <div className="my-auto">
+            <LightShuffleIcon color="#cbd5e1" size="23" />
           </div>
 
           {/* previous */}
+          <div className="my-auto">
+            <BoldPreviousIcon color="#cbd5e1" size="40" />
+          </div>
 
           {/* play&pause */}
+          <div className="my-auto">
+            <BoldPlayIcon color="#ffffff" size="43" />
+          </div>
 
           {/* next */}
+          <div className="my-auto">
+            <BoldNextIcon color="#cbd5e1" size="40" />
+          </div>
 
           {/* repeat */}
+          <div className="my-auto">
+            <RepeatIcon color="#cbd5e1" size="23" />
+          </div>
         </div>
 
         {/*  */}
-        <div></div>
+        <div>
+          {/* t1 */}
+          <div></div>
+
+          {/* music */}
+          <div className="w-[250%] h-1 rounded-md bg-white"></div>
+
+          {/* t2 */}
+          <div></div>
+        </div>
       </div>
 
       {/* volume and other controls */}
-      <div></div>
+      <div className="flex space-x-2">
+        {/*  */}
+        <div className="my-auto">
+          <LightQueueIcon color="#22c55e" size="25" />
+        </div>
+
+        {/*  */}
+        <div className="my-auto">
+          <LightDeviceIcon color="#22c55e" size="25" />
+        </div>
+
+        {/*  */}
+        <div className="w-36 h-1 rounded-md bg-white my-auto"></div>
+      </div>
     </div>
   );
 };

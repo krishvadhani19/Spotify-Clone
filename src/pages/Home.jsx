@@ -7,7 +7,7 @@ import Player from "../components/Player";
 const Home = () => {
   return (
     <div className="flex flex-col space-y-2 bg-dark-100 p-2 h-screen">
-      <div className="flex space-x-2 bg-dark-100 w-full h-[90%] overflow-y-scroll rounded-md">
+      <div className="flex space-x-2 bg-dark-100 w-full h-[89%] overflow-y-scroll rounded-md">
         {/* Navbar */}
         <div className="h-full w-[20%] rounded-md">
           <Navbar />
@@ -48,7 +48,7 @@ const Home = () => {
       </div>
 
       {/* div */}
-      <div className="w-full h-[10%]">
+      <div className="w-full h-[11%]">
         <Player />
       </div>
     </div>
