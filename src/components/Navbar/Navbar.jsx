@@ -162,14 +162,27 @@ const Navbar = () => {
 
           {/* other icons */}
           <div className="flex space-x-2">
-            <div className="rounded-full hover:bg-dark-400 cursor-pointer p-1">
+            <div
+              className="rounded-full hover:bg-dark-400 cursor-pointer p-1"
+              data-tooltip-id="createPlaylist"
+              data-tooltip-content="Create playlist or folder"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
+            >
+              <Tooltip id="createPlaylist" className="tooltip" />
               <PlusIcon size="30" color="#ffffff" />
             </div>
 
             <div
               className="rounded-full hover:bg-dark-400 cursor-pointer p-1"
-              id="rightArrowIcon"
+              data-tooltip-id="enlargeLibrary"
+              data-tooltip-content="Enlarge Your Library"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
             >
+              <Tooltip id="enlargeLibrary" className="tooltip" />
               <RightArrowIcon size="30" color="#ffffff" />
             </div>
           </div>
@@ -191,7 +204,15 @@ const Navbar = () => {
           {/* search and recent */}
           <div className="flex justify-between">
             {/* searchicon */}
-            <div className="rounded-full hover:bg-dark-400 cursor-pointer p-2">
+            <div
+              className="rounded-full hover:bg-dark-400 cursor-pointer p-2"
+              data-tooltip-id="searchLibrary"
+              data-tooltip-content="Search in Your Library"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
+            >
+              <Tooltip id="searchLibrary" className="tooltip" />
               <LightSearchIcon size="25" color="#ffffff" />
             </div>
 

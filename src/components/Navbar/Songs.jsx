@@ -4,11 +4,11 @@ const Songs = (props) => {
   return (
     <div className="flex space-x-4 bg-dark-300 hover:bg-dark-400 cursor-pointer transition delay-100 duration-100 ease-in-out rounded-md p-1">
       {/* Image */}
-      <div className="w-16 h-16 rounded-md">
+      <div className="w-14 h-14 rounded-md">
         <img
           src={props.data.imageURL}
           alt="songImage"
-          className="w-16 h-16 rounded-md"
+          className="w-14 h-14 rounded-md"
         />
       </div>
 
@@ -29,7 +29,7 @@ const Songs = (props) => {
           )}
 
           {/*  */}
-          <div className="flex space-x-1 text-md font-medium text-primary-gray">
+          <div className="flex space-x-1 text-sm font-medium text-primary-gray">
             <div>{props.data.type}</div>
             <div className="">.</div>
             <div>{props.data.creator}</div>

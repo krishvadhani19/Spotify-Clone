@@ -270,26 +270,68 @@ const Player = () => {
       {/* volume and other controls */}
       <div className="w-[25%] flex space-x-4 justify-end">
         {/*  */}
-        <div className="my-auto cursor-pointer">
+        <div
+          className="my-auto cursor-pointer"
+          data-tooltip-id="lyrics"
+          data-tooltip-content="Lyrics"
+          data-tooltip-delay-hide={150}
+          data-tooltip-delay-show={150}
+          place="top"
+        >
+          <Tooltip id="lyrics" className="tooltip bg-dark-300" />
           <LightMicIcon color="#cbd5e1" size="21" />
         </div>
 
         {/*  */}
-        <div className="my-auto cursor-pointer">
+        <div
+          className="my-auto cursor-pointer"
+          data-tooltip-id="queue"
+          data-tooltip-content="Queue"
+          data-tooltip-delay-hide={150}
+          data-tooltip-delay-show={150}
+          place="top"
+        >
+          <Tooltip id="queue" className="tooltip bg-dark-300" />
           <LightQueueIcon color="#cbd5e1" size="21" />
         </div>
 
         {/*  */}
-        <div className="my-auto cursor-pointer">
+        <div
+          className="my-auto cursor-pointer"
+          data-tooltip-id="connectToDevice"
+          data-tooltip-content="Connect to a device"
+          data-tooltip-delay-hide={150}
+          data-tooltip-delay-show={150}
+          place="top"
+        >
+          <Tooltip id="connectToDevice" className="tooltip bg-dark-300" />
           <LightDeviceIcon color="#cbd5e1" size="21" />
         </div>
 
         {/*  */}
         <div className="my-auto cursor-pointer" onClick={handleMute}>
           {mute ? (
-            <LightSoundMuteIcon color="#cbd5e1" size="21" />
+            <div
+              data-tooltip-id="unmute"
+              data-tooltip-content="Unmute"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
+            >
+              <Tooltip id="unmute" className="tooltip bg-dark-300" />
+              <LightSoundMuteIcon color="#cbd5e1" size="21" />
+            </div>
           ) : (
-            <LightSoundIcon color="#cbd5e1" size="21" />
+            <div
+              data-tooltip-id="mute"
+              data-tooltip-content="Mute"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
+            >
+              <Tooltip id="mute" className="tooltip bg-dark-300" />
+              <LightSoundIcon color="#cbd5e1" size="21" />
+            </div>
           )}
         </div>
 
