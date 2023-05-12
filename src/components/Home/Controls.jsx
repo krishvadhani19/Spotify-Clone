@@ -38,14 +38,18 @@ const Controls = (props) => {
         </div>
 
         {props.searchVerify ? (
-          <div className="flex bg-dark-400 p-1 rounded-full">
+          <div className="flex bg-dark-400 p-1 rounded-full focus:outline-none focus:ring focus:ring-violet-300">
             {/* icon */}
             <div className="my-auto">
               <LightSearchIcon color="#ffffff" size="30" />
             </div>
 
             <div className="my-auto">
-              <input type="text" className="bg-dark-400" />
+              <input
+                type="text"
+                className="bg-dark-400 focus:outline-none w-44"
+                placeholder="What do you want to listen to?"
+              />
             </div>
           </div>
         ) : (

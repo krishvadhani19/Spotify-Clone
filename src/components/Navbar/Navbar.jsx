@@ -179,7 +179,10 @@ const Navbar = () => {
         {/* categeroies */}
         <div className="flex space-x-2 overflow-x-scroll px-3 py-2">
           {categories.map((element) => (
-            <div className="text-white bg-dark-400 py-1 px-2 rounded-full font-medium cursor-pointer">
+            <div
+              className="text-white bg-dark-400 py-1 px-2 rounded-full font-medium cursor-pointer"
+              key={element}
+            >
               {element}
             </div>
           ))}
@@ -207,7 +210,7 @@ const Navbar = () => {
           <div className="flex flex-col space-y-2">
             {/*  */}
             {librarayData.map((element) => (
-              <Songs data={element} ket={element.imageURL} />
+              <Songs data={element} key={element.imageURL} />
             ))}
           </div>
         </div>

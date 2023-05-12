@@ -19,6 +19,26 @@ const Player = () => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
   const [mute, setMute] = useState(false);
+  const [shuffle, setShuffle] = useState(false);
+  const [repeat, setRepeat] = useState("repeat");
+
+  const handleRepeat = () => {
+    if (repeat === "repeat") {
+      setRepeat("repeatOne");
+    } else if (repeat === "repeatOne") {
+      setRepeat("off");
+    } else if (repeat === "off") {
+      setRepeat("repeat");
+    }
+  };
+
+  const handleShuffle = () => {
+    if (shuffle) {
+      setShuffle(false);
+    } else {
+      setShuffle(true);
+    }
+  };
 
   const handleMute = () => {
     if (mute) {
@@ -81,8 +101,12 @@ const Player = () => {
         {/*  */}
         <div className=" mx-auto flex space-x-4">
           {/* shuffle */}
-          <div className="my-auto">
-            <LightShuffleIcon color="#cbd5e1" size="23" />
+          <div className="my-auto" onClick={handleShuffle}>
+            {shuffle ? (
+              <LightShuffleIcon color="#22c55e" size="23" />
+            ) : (
+              <LightShuffleIcon color="#cbd5e1" size="23" />
+            )}
           </div>
 
           {/* previous */}
@@ -105,8 +129,24 @@ const Player = () => {
           </div>
 
           {/* repeat */}
-          <div className="my-auto">
-            <RepeatIcon color="#cbd5e1" size="23" />
+          <div className="my-auto" onClick={handleRepeat}>
+            {repeat === "repeat" ? (
+              <RepeatIcon color="#22c55e" size="23" />
+            ) : (
+              <></>
+            )}
+
+            {repeat === "repeatOne" ? (
+              <RepeatOneIcon color="#22c55e" size="23" />
+            ) : (
+              <></>
+            )}
+
+            {repeat === "off" ? (
+              <RepeatIcon color="#cbd5e1" size="23" />
+            ) : (
+              <></>
+            )}
           </div>
         </div>
 
