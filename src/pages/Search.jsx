@@ -1,9 +1,7 @@
 import Navbar from "../components/Navbar/Navbar";
-import Heading from "../components/Home/Heading";
-import MostLikely from "../components/Home/MostLikely";
-import TopMixes from "../components/Home/TopMixes";
 import Player from "../components/Player";
 import Controls from "../components/Home/Controls";
+import BrowseAll from "../components/Search/BrowseAll";
 
 const Search = () => {
   return (
@@ -18,7 +16,12 @@ const Search = () => {
         <div className="ml-[21%] flex flex-col space-y-4 w-[80%] h-full bg-dark-200 rounded-md overflow-y-auto p-4">
           {/* controls */}
           <div className="w-full">
-            <Controls searchVerify={true}/>
+            <Controls searchVerify={true} />
+          </div>
+
+          {/* browse All */}
+          <div className="w-full">
+            <BrowseAll />
           </div>
         </div>
       </div>
