@@ -32,4 +32,8 @@
   .primary-text {
     @apply text-lg font-medium;
   }
+
+  .tooltip {
+    @apply text-white bg-black font-medium py-1 px-2;
+  }
 }

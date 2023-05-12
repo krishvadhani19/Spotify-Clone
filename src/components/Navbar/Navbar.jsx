@@ -1,7 +1,7 @@
 import { useLocation, Link } from "react-router-dom";
 import Songs from "./Songs";
-import tippy from "tippy.js";
-import "tippy.js/dist/tippy.css";
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
 
 // Icons
 import BoldHomeIcon from "../../Icons/Bold/Home";
@@ -15,12 +15,6 @@ import SmallDownArrowIcon from "../../Icons/Regular/SmallDownArrow";
 
 const Navbar = () => {
   const location = useLocation();
-
-  tippy("#yourLibrary", {
-    content: "Your Library",
-    // animation: "fade",
-    placement: "top",
-  });
 
   const librarayData = [
     {
@@ -154,9 +148,14 @@ const Navbar = () => {
 
             {/* text */}
             <div
-              className="tooltip primary-text text-primary-gray hover:text-white select-none"
-              id="yourLibrary"
+              className="primary-text text-primary-gray hover:text-white select-none"
+              data-tooltip-id="yourLibrary"
+              data-tooltip-content="Collapse Your Library"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
             >
+              <Tooltip id="yourLibrary" className="tooltip" />
               Your Library
             </div>
           </div>

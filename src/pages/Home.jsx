@@ -16,7 +16,7 @@ const Home = () => {
 
         {/* Main Page */}
         <div className="ml-[21%] flex flex-col space-y-4 w-[80%] h-full bg-dark-200 rounded-md overflow-y-auto">
-          <div className="flex flex-col space-y-4 w-full bg-gradient-to-b from-cyan-800 to-dark-200 pt-4 px-4">
+          <div className="flex flex-col space-y-4 w-full bg-gradient-to-b from-cyan-800 to-dark-200 pt-6 px-4">
             {/* controls */}
             <div className="w-full">
               <Controls searchVerify={false} />

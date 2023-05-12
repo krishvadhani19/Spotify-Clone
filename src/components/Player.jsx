@@ -13,6 +13,9 @@ import LightHeartIcon from "../Icons/Light/Heart";
 import BoldPauseIcon from "../Icons/Bold/Pause";
 import LightSoundMuteIcon from "../Icons/Light/SoundMute";
 
+import { Tooltip } from "react-tooltip";
+import "react-tooltip/dist/react-tooltip.css";
+
 import { useState } from "react";
 
 const Player = () => {
@@ -89,9 +92,27 @@ const Player = () => {
 
         <div className="my-auto" onClick={hanldleLike}>
           {like ? (
-            <BoldHeartIcon color="#22c55e" size="23" />
+            <div
+              data-tooltip-id="removeFromLibrary"
+              data-tooltip-content="Remove From Library"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
+            >
+              <Tooltip id="removeFromLibrary" className="tooltip bg-dark-300" />
+              <BoldHeartIcon color="#22c55e" size="23" />
+            </div>
           ) : (
-            <LightHeartIcon color="#22c55e" size="23" />
+            <div
+              data-tooltip-id="addToLibrary"
+              data-tooltip-content="Save To Library"
+              data-tooltip-delay-hide={150}
+              data-tooltip-delay-show={150}
+              place="top"
+            >
+              <Tooltip id="addToLibrary" className="tooltip bg-dark-300" />
+              <LightHeartIcon color="#22c55e" size="23" />
+            </div>
           )}
         </div>
       </div>
@@ -103,47 +124,126 @@ const Player = () => {
           {/* shuffle */}
           <div className="my-auto" onClick={handleShuffle}>
             {shuffle ? (
-              <LightShuffleIcon color="#22c55e" size="23" />
+              <div
+                data-tooltip-id="disableShuffle"
+                data-tooltip-content="Disable Shuffle"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="disableShuffle" className="tooltip bg-dark-300" />
+                <LightShuffleIcon color="#22c55e" size="23" />
+              </div>
             ) : (
-              <LightShuffleIcon color="#cbd5e1" size="23" />
+              <div
+                data-tooltip-id="enableShuffle"
+                data-tooltip-content="Enable Shuffle"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="enableShuffle" className="tooltip bg-dark-300" />
+                <LightShuffleIcon color="#cbd5e1" size="23" />
+              </div>
             )}
           </div>
 
           {/* previous */}
-          <div className="my-auto">
+          <div
+            className="my-auto"
+            data-tooltip-id="previous"
+            data-tooltip-content="Previous"
+            data-tooltip-delay-hide={150}
+            data-tooltip-delay-show={150}
+            place="top"
+          >
+            <Tooltip id="previous" className="tooltip bg-dark-300" />
             <BoldPreviousIcon color="#cbd5e1" size="40" />
           </div>
 
           {/* play&pause */}
           <div className="mx-auto my-auto hover:scale-105" onClick={handlePlay}>
             {play ? (
-              <BoldPauseIcon color="#ffffff" size="43" />
+              <div
+                data-tooltip-id="Pause"
+                data-tooltip-content="Pause"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="Pause" className="tooltip bg-dark-300" />
+                <BoldPauseIcon color="#ffffff" size="43" />
+              </div>
             ) : (
-              <BoldPlayIcon color="#ffffff" size="43" />
+              <div
+                data-tooltip-id="Play"
+                data-tooltip-content="Play"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="Play" className="tooltip bg-dark-300" />
+                <BoldPlayIcon color="#ffffff" size="43" />
+              </div>
             )}
           </div>
 
           {/* next */}
-          <div className="my-auto">
+          <div
+            className="my-auto"
+            data-tooltip-id="next"
+            data-tooltip-content="Next"
+            data-tooltip-delay-hide={150}
+            data-tooltip-delay-show={150}
+            place="top"
+          >
+            <Tooltip id="next" className="tooltip bg-dark-300" />
             <BoldNextIcon color="#cbd5e1" size="40" />
           </div>
 
           {/* repeat */}
           <div className="my-auto" onClick={handleRepeat}>
             {repeat === "repeat" ? (
-              <RepeatIcon color="#22c55e" size="23" />
+              <div
+                data-tooltip-id="enableRepeatOne"
+                data-tooltip-content="Enable Repeat One"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="enableRepeatOne" className="tooltip bg-dark-300" />
+                <RepeatIcon color="#22c55e" size="23" />
+              </div>
             ) : (
               <></>
             )}
 
             {repeat === "repeatOne" ? (
-              <RepeatOneIcon color="#22c55e" size="23" />
+              <div
+                data-tooltip-id="disableRepeat"
+                data-tooltip-content="Disable Repeat"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="disableRepeat" className="tooltip bg-dark-300" />
+                <RepeatOneIcon color="#22c55e" size="23" />
+              </div>
             ) : (
               <></>
             )}
 
             {repeat === "off" ? (
-              <RepeatIcon color="#cbd5e1" size="23" />
+              <div
+                data-tooltip-id="enableRepeat"
+                data-tooltip-content="Enable Repeat"
+                data-tooltip-delay-hide={150}
+                data-tooltip-delay-show={150}
+                place="top"
+              >
+                <Tooltip id="enableRepeat" className="tooltip bg-dark-300" />
+                <RepeatIcon color="#cbd5e1" size="23" />
+              </div>
             ) : (
               <></>
             )}
