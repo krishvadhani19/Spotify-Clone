@@ -4,6 +4,7 @@ import MostLikely from "../components/Home/MostLikely";
 import TopMixes from "../components/Home/TopMixes";
 import Player from "../components/Player";
 import Controls from "../components/Home/Controls";
+import Sponsor from "../components/Home/Sponsor";
 
 const Home = () => {
   return (
@@ -23,7 +24,9 @@ const Home = () => {
             </div>
 
             {/* sponsored */}
-            <div className="w-full"></div>
+            <div className="w-full">
+              <Sponsor />
+            </div>
 
             {/* Heading */}
             <div className="w-full">

@@ -2,7 +2,7 @@ import BoldPinIcon from "../../Icons/Bold/Pin";
 
 const Songs = (props) => {
   return (
-    <div className="flex space-x-4 bg-dark-300 hover:bg-dark-400 cursor-pointer transition delay-100 duration-100 ease-in-out rounded-md p-1">
+    <div className="flex space-x-4 bg-dark-200 hover:bg-dark-300 cursor-pointer transition delay-100 duration-100 ease-in-out rounded-md p-1">
       {/* Image */}
       <div className="w-14 h-14 rounded-md">
         <img
