@@ -16,6 +16,10 @@ export default {
 
         "primary-gray": "#cbd5e1",
       },
+
+      boxShadow: {
+        rightShadow: "6px 0px 20px #000000",
+      },
     },
   },
   plugins: [],

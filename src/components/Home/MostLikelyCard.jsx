@@ -17,7 +17,7 @@ const MostLikelyCard = (props) => {
       onMouseOut={handleMouseOut}
     >
       {/* img */}
-      <div className="shadow-xl shadow-black/50 mr-6">
+      <div className="shadow-rightShadow shadow-black/50 mr-6">
         <img
           className="w-24 h-24 rounded-l-md"
           src={props.data.imageURL}
@@ -33,13 +33,12 @@ const MostLikelyCard = (props) => {
       {/* Play Button */}
 
       {playButtonDisplay ? (
-       <div className="shadow-lg shadow-black/50  bg-dark-100 rounded-full my-auto ml-auto mr-4 hover:scale-110 transition ease-in-out delay-75 duration-100">
-       <BoldPlayIcon size="55" color="#22c55e" className="bg-dark-100 " />
-     </div>
+        <div className="shadow-lg shadow-black/50  bg-dark-100 rounded-full my-auto ml-auto mr-4 hover:scale-110 transition ease-in-out delay-75 duration-100">
+          <BoldPlayIcon size="55" color="#22c55e" className="bg-dark-100 " />
+        </div>
       ) : (
         <></>
       )}
-    
     </div>
   );
 };
