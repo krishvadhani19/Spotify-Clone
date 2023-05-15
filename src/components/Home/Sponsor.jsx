@@ -16,9 +16,15 @@ const Sponsor = () => {
       </div>
 
       {/* text */}
-      <div className="flex flex-col space-y-3 text-white">
+      <div className="w-full flex flex-col space-y-3 text-white">
         {/*  */}
-        <div className="text-base font-medium cursor-default">SONG</div>
+        <div className="w-full flex justify-between">
+          <div className="text-base font-medium cursor-default">SONG</div>
+
+          <div className="text-white text-sm font-bold bg-dark-100/30 px-2 py-1 rounded-md">
+            Sponsored
+          </div>
+        </div>
 
         <div className="flex flex-col space-y-2">
           {/* song name */}
