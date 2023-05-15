@@ -27,7 +27,9 @@ const Home = () => {
             <div className="w-full">
               <Sponsor />
             </div>
+          </div>
 
+          <div className="flex flex-col space-y-4 w-full bg-dark-200 px-4 pb-4">
             {/* Heading */}
             <div className="w-full">
               <Heading />
@@ -42,9 +44,6 @@ const Home = () => {
             <div>
               <TopMixes />
             </div>
-          </div>
-
-          <div className="flex flex-col space-y-4 w-full bg-dark-200 px-4 pb-4">
             {/* Top Mixes */}
             <div>
               <TopMixes />
